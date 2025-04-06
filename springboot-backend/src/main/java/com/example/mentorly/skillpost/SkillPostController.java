@@ -334,7 +334,7 @@ public class SkillPostController {
         SkillPost skillPost = skillPostService.findById(skillPostId);
         return ResponseEntity.ok(skillPostMapper.toDto(skillPost));
     }
-
+ 
     // Social interaction endpoints
 
     @PostMapping("/{skill-post-id}/like")
