@@ -6,7 +6,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+ 
 @Service
 @RequiredArgsConstructor
 public class SkillPostService {
