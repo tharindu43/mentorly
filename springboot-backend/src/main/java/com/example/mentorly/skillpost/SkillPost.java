@@ -33,6 +33,6 @@ public class SkillPost {
     private String description;
     private int noOfLikes;
     private Set<String> likedUserIds;
-    private List<Comment> comments;
+    private List<Comment> comments; 
     private LocalDateTime createdAt;
 }
