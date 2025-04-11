@@ -46,6 +46,7 @@ public class Plan {
     @Builder.Default
     private int noOfLikes = 0;
 
+    
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
