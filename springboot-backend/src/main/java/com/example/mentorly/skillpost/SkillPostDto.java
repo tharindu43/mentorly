@@ -28,3 +28,4 @@ public class SkillPostDto {
     private List<CommentDto> comments;
     private LocalDateTime createdAt;
 }
+
