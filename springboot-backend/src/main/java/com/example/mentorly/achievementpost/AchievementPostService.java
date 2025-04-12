@@ -100,7 +100,7 @@ public class AchievementPostService {
         }
 
         return achievementPostRepository.save(post);
-    }
+    } 
 
     // Remove like from post
     public AchievementPost removeLike(String postId, String userId) {
