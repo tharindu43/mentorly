@@ -12,4 +12,5 @@ public interface UserRepository extends MongoRepository<User, String> {
     Optional<User> findByGoogleId(String googleId);
     List<User> findByEmailContainingIgnoreCaseOrNameContainingIgnoreCaseOrBioContainingIgnoreCase(
             String email, String name, String bio);
+            
 }
