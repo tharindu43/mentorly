@@ -10,7 +10,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.List; 
 
 @RestController
 @RequestMapping("/api/v1/enrollments")
