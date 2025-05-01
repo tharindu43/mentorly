@@ -50,4 +50,8 @@ public class NotificationService {
         notifications.forEach(notification -> notification.setNotificationRead(true));
         notificationRepository.saveAll(notifications);
     }
+
+    public void deleteAllNotificationsByUser(String userId) {
+        notificationRepository.deleteByAuthorId(userId);
+    }
 }

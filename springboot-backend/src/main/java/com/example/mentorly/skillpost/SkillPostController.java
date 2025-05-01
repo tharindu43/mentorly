@@ -612,8 +612,6 @@ public class SkillPostController {
         return ResponseEntity.ok(suggestedPosts);
     }
 
-    
-
     // Helper method to calculate suggestion score for authenticated users
     private int calculateSuggestionScore(SkillPost post, User user) {
         int score = 0;

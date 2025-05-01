@@ -100,7 +100,7 @@ public class AchievementPostService {
         }
 
         return achievementPostRepository.save(post);
-    } 
+    }
 
     // Remove like from post
     public AchievementPost removeLike(String postId, String userId) {
@@ -111,5 +111,17 @@ public class AchievementPostService {
             }
         }
         return achievementPostRepository.save(post);
+    }
+
+    public void deleteAllCommentsByUserId(String userId) {
+        // Find all posts where comments exist
+        List<AchievementPost> posts = achievementPostRepository.findAll();
+
+        for (AchievementPost achievementPost : posts) {
+            boolean changed = achievementPost.getComments().removeIf(comment -> comment.getAuthorId().equals(userId));
+            if (changed) {
+                achievementPostRepository.save(achievementPost);
+            }
+        }
     }
 }

@@ -99,4 +99,15 @@ public class SkillPostService {
                 .mapToInt(SkillPost::getNoOfLikes)
                 .sum();
     }
+
+    public void deleteAllCommentsByUserId(String userId) {
+        List<SkillPost> posts = skillPostRepository.findAll();
+
+        for (SkillPost post : posts) {
+            boolean changed = post.getComments().removeIf(comment -> comment.getAuthorId().equals(userId));
+            if (changed) {
+                skillPostRepository.save(post);
+            }
+        }
+    }
 }

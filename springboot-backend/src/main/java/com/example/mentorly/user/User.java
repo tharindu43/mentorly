@@ -29,7 +29,5 @@ public class User {
     private String bio;
     private LocalDateTime createdAt;
     private LocalDateTime lastLoginAt;
-
-    
 }
 

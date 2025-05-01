@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
-  
+
 @Document("achievement-posts")
 @Data
 @AllArgsConstructor
@@ -33,5 +33,4 @@ public class AchievementPost {
     private Set<String> likedUserIds;
     private int noOfLikes;
     private List<Comment> comments;
-    
 }

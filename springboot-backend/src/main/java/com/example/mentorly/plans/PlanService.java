@@ -124,4 +124,15 @@ public class PlanService {
     public boolean isUserEnrolled(String userId, String planId) {
         return enrollmentRepository.existsByUserIdAndPlanId(userId, new ObjectId(planId));
     }
+
+    public void deleteCommentsByUserId(String userId){
+        List<Plan> plans = planRepository.findAll();
+
+        for (Plan plan : plans) {
+            boolean changed = plan.getComments().removeIf(comment -> comment.getAuthorId().equals(userId));
+            if (changed) {
+                planRepository.save(plan);
+            }
+        }
+    }
 }
