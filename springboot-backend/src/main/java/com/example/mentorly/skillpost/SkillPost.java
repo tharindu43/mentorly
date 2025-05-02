@@ -36,4 +36,3 @@ public class SkillPost {
     private List<Comment> comments;
     private LocalDateTime createdAt;
 }
-

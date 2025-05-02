@@ -86,5 +86,3 @@ public class EnrollmentController {
         return ResponseEntity.ok(enrollmentMapper.toDto(updatedEnrollment));
     }
 }
-
-

@@ -308,8 +308,7 @@ public class AchievementPostController {
 
         return ResponseEntity.ok(postDtos);
     }
- 
-    
+
     @GetMapping("/liked")
     public ResponseEntity<List<AchievementPostDto>> getLikedPosts(
             @AuthenticationPrincipal OAuth2IntrospectionAuthenticatedPrincipal principal) {

@@ -25,5 +25,4 @@ public class AchievementPostDto {
     private Set<String> likedUserIds;
     private int noOfLikes;
     private List<CommentDto> comments;
-    
 }

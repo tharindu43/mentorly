@@ -31,4 +31,3 @@ public class User {
     private LocalDateTime lastLoginAt;
 }
 
-// Compare this snippet from springboot-backend/src/main/java/com/example/mentorly/user/UserRepository.java:

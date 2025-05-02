@@ -11,4 +11,3 @@ import lombok.Data;
 public class UserRequest {
     @NotBlank String email;
 }
-// Compare this snippet from springboot-backend/src/main/java/com/example/mentorly/user/UserService.java:
