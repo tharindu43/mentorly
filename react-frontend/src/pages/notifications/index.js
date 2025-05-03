@@ -8,6 +8,7 @@ import ScrollToTop from '../../components/ScrollTop';
 import Logo from '../../assets/images/logos/logo2.png';
 import NotificationList from './NotificationList';
 
+
 const Profile = () => {
     return (
         <>

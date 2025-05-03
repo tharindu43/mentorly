@@ -7,6 +7,7 @@ import courses from '../../data/Courses.json';
 import authorImg1 from '../../assets/images/course-single/user4.jpg'
 import authorImg2 from '../../assets/images/course-single/user5.jpg'
 
+
 const PreviewDetailsMain = (props) => {
     let tab1 = "Discription",
         tab3 = "Comments",
