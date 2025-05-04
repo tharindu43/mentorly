@@ -9,7 +9,14 @@ public class NotificationMapper {
 
     public NotificationDto toDto(Notification entity) {
         return new NotificationDto(
-                
+                entity.getNotificationId() != null ? entity.getNotificationId().toHexString() : null,
+                entity.getAuthorId(),
+                entity.getUserName(),
+                entity.getPostId(),
+                entity.getNotificationType(),
+                entity.getNotificationContent(),
+                entity.getNotificationCreatedAt(),
+                entity.isNotificationRead()
         );
     }
 
