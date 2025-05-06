@@ -22,12 +22,7 @@ public class NotificationService {
         return notificationMapper.toDto(saved);
     }
 
-    public List<NotificationDto> getByUser(String userId) {
-        return notificationRepository.findByAuthorIdOrderByNotificationCreatedAtDesc(userId)
-                .stream()
-                .map(notificationMapper::toDto)
-                .collect(Collectors.toList());
-    }
+    
 
     public long countUnread(String userId) {
         return notificationRepository.countByAuthorIdAndNotificationReadFalse(userId);
