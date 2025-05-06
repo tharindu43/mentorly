@@ -11,17 +11,7 @@ const MilestonesGridMain = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchMilestones = async () => {
-      try {
-        setLoading(true);
-        const response = await milestonePostService.getAll();
-        setMilestones(response);
-        setLoading(false);
-      } catch {
-        setError('Failed to load milestones. Please try again later.');
-        setLoading(false);
-      }
-    };
+   
 
     fetchMilestones();
   }, []);
