@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface NotificationRepository extends MongoRepository<Notification, String> {
+public interface NotificationRepository extends MongoRepository<Notification, String> 
+{
     List<Notification> findByAuthorIdOrderByNotificationCreatedAtDesc(String userId);
 
     long countByAuthorIdAndNotificationReadFalse(String userId);
