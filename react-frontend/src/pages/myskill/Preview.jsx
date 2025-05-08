@@ -12,7 +12,11 @@ import LoadingSpinner from '../../components/Public/LoadingSpinner';
 
 const Preview = () => {
 
-    
+    const { skillPostId } = useParams();
+    const [post, setPost] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
