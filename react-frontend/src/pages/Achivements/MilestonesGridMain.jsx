@@ -39,7 +39,11 @@ const MilestonesGridMain = () => {
 
   if (error) {
     return (
-      
+      <div className="react-course-filter back__course__page_grid pb---40 pt---110">
+        <div className="container pb---70">
+          <div className="alert alert-danger">{error}</div>
+        </div>
+      </div>
     );
   }
 
