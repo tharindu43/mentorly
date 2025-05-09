@@ -23,4 +23,5 @@ public class AchievementPostRequest {
 
     @NotNull(message = "Template data cannot be null")
     private TemplateData templateData;
+    
 }
