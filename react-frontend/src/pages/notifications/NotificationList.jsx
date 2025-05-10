@@ -58,6 +58,16 @@ const NotificationList = () => {
     }
   };
 
+  const markAllAsRead = async () => {
+    try {
+      await notificationService.markAllAsRead(); // Call the API to mark all as read
+      setNotifications(prev => prev.map(n => ({ ...n, notificationRead: true })));
+      setUnreadCount(0);
+      showNotification('Done', 'success');
+    } catch (error) {
+      console.error("Failed to mark all as read:", error);
+    }
+  };
   
 
   const deleteNotification = async (id) => {
