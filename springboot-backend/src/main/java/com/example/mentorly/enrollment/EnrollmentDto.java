@@ -19,3 +19,5 @@ public class EnrollmentDto {
     private LocalDateTime enrolledAt;
     private List<WeekProgressDto> progress;
 }
+
+
