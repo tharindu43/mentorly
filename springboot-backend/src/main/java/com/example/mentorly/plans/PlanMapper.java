@@ -50,7 +50,6 @@ public class PlanMapper {
                 .noOfLikes(plan.getNoOfLikes())
                 .userLiked(userLiked)
                 .build();
-        
     }
 
     public void updateEntityFromRequest(PlanRequest request, Plan plan) {

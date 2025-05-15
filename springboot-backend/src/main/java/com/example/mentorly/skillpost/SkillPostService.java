@@ -6,7 +6,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+ 
 @Service
 @RequiredArgsConstructor
 public class SkillPostService {
@@ -98,5 +98,16 @@ public class SkillPostService {
         return userPosts.stream()
                 .mapToInt(SkillPost::getNoOfLikes)
                 .sum();
+    }
+
+    public void deleteAllCommentsByUserId(String userId) {
+        List<SkillPost> posts = skillPostRepository.findAll();
+
+        for (SkillPost post : posts) {
+            boolean changed = post.getComments().removeIf(comment -> comment.getAuthorId().equals(userId));
+            if (changed) {
+                skillPostRepository.save(post);
+            }
+        }
     }
 }

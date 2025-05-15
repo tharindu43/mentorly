@@ -81,4 +81,12 @@ public class EnrollmentService {
         ObjectId planObjectId = new ObjectId(planId);
         enrollmentRepository.deleteByPlanId(planObjectId);
     }
+
+    public void deleteAllEnrollmentsByUserId(String userId){
+        List<Enrollment> enrollments = enrollmentRepository.findByUserId(userId);
+
+        for (Enrollment enrollment : enrollments) {
+            enrollmentRepository.deleteById(enrollment.getId());
+        }
+    }
 }

@@ -334,7 +334,7 @@ public class SkillPostController {
         SkillPost skillPost = skillPostService.findById(skillPostId);
         return ResponseEntity.ok(skillPostMapper.toDto(skillPost));
     }
-
+ 
     // Social interaction endpoints
 
     @PostMapping("/{skill-post-id}/like")
@@ -611,8 +611,6 @@ public class SkillPostController {
 
         return ResponseEntity.ok(suggestedPosts);
     }
-
-    
 
     // Helper method to calculate suggestion score for authenticated users
     private int calculateSuggestionScore(SkillPost post, User user) {

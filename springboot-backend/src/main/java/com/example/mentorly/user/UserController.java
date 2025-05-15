@@ -111,4 +111,29 @@ public class UserController {
                 .collect(Collectors.toList());
         return ResponseEntity.ok(dtos);
     }
+
+    @DeleteMapping("/me")
+    public ResponseEntity<Void> deleteUserById(
+            @AuthenticationPrincipal OAuth2IntrospectionAuthenticatedPrincipal principal
+    ) {
+
+        String googleId = principal.getAttributes().get("sub").toString();
+        User user = userService.findByGoogleId(googleId);
+
+
+        if (user == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
+        String userId = user.getId().toHexString();
+
+        boolean deleted = userService.deleteUserById(userId);
+
+
+        if (deleted) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 }
