@@ -13,8 +13,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class PlanMapper {
 
-
-    
     private final CommentMapper commentMapper;
 
     public Plan toEntity(PlanRequest request) {

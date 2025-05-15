@@ -16,5 +16,3 @@ public interface SkillPostRepository extends MongoRepository<SkillPost, String> 
 
     List<SkillPost> findBySkillName(String skillName, Sort sort);
 }
-// Compare this snippet from springboot-backend/src/main/java/com/example/mentorly/skillpost/SkillPostService.java:
-// package com.example.mentorly.skillpost;
