@@ -4,7 +4,12 @@ import SkillSinglePost from '../../components/Myskill/SkillSinglePost';
 import { skillPostService } from '../../services/skillPostService';
 
 const MySkillsGridMain = () => {
-    
+    const [skillPosts, setSkillPosts] = useState([]);
+    const [error, setError] = useState(null);
+    const [category, setCategory] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 6;
+
     // Fetch current user's skill posts
     useEffect(() => {
         const fetchCurrentUserPosts = async () => {
